@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import React, { useEffect, useState } from 'react'
+import logo from "./logo.svg";
+import React, { useEffect, useState } from "react";
 
 function App() {
   const [data, setData] = useState([]);
@@ -7,13 +7,13 @@ function App() {
     fetch("url").then((result) => {
       result.json().then((response) => {
         // console.log("result", response)
-        setData(response)
-      })
-    })
-  }, [])
+        setData(response);
+      });
+    });
+  }, []);
   console.log(data);
   return (
-    <div className='App'>
+    <div className="App">
       <h1>API Call</h1>
       <table border="2px">
         <tbody>
@@ -23,15 +23,14 @@ function App() {
             <td>Email</td>
             <td>Mobile</td>
           </tr>
-          {
-            data.map((item) => {
-              <tr>
-                <td>{item.userId}</td>
-                <td>{item.name}</td>
-                <td>{item.email}</td>
-                <td>{item.mobile}</td>
-              </tr>
-            })}
+          {data.map((item) => {
+            <tr>
+              <td>{item.userId}</td>
+              <td>{item.name}</td>
+              <td>{item.email}</td>
+              <td>{item.mobile}</td>
+            </tr>;
+          })}
         </tbody>
       </table>
     </div>
