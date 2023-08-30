@@ -14,7 +14,7 @@ function App() {
   console.log(data);
   return (
     <div className="App">
-      <h1>API Call</h1>
+      <h1>API Calling</h1>
       <table border="2px">
         <tbody>
           <tr>
